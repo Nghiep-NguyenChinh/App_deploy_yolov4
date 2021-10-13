@@ -22,23 +22,23 @@ st.title("**OBJECT DETECTION**")
 # st.write(row3)
 # st.write(row4)
 
-st.markdown("\
-<table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">\
+st.markdown(" \
+<table style="border-collapse: collapse; width: 100%; height: 44px;" border="1"> \
 <tbody>\
-<tr style="height: 17px;">\
-<td style="width: 29.5407%; height: 17px;">Mentor</td>\
-<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td>\
-</tr>\
-<tr style="height: 17px;">\
-<td style="width: 29.5407%; height: 17px;">Mentees</td>\
-<td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td>\
-</tr>\
-<tr style="height: 10px;">\
-<td style="width: 29.5407%; height: 10px;">&nbsp;</td>\
-<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td>\
-</tr>\
-</tbody>\
-</table>  ")          
+<tr style="height: 17px;"> \
+<td style="width: 29.5407%; height: 17px;">Mentor</td> \
+<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td> \
+</tr> \
+<tr style="height: 17px;"> \
+<td style="width: 29.5407%; height: 17px;">Mentees</td> \
+<td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td> \
+</tr> \
+<tr style="height: 10px;"> \
+<td style="width: 29.5407%; height: 10px;">&nbsp;</td> \
+<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td> \
+</tr> \
+</tbody> \
+</table>  ",unsafe_allow_html=True)          
 
 
 #Ham tải về
