@@ -42,7 +42,7 @@ components.html(
 </tbody>
 </table>
     """,
-    height=50,
+    height=100,
 )
 
 #Ham tải về
