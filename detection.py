@@ -14,12 +14,12 @@ import streamlit.components.v1 as components
 #st.title("**OBJECT DETECTION**")
 st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
 st.markdown("""
-<h3 style='text-align: center;'>
+<div align="center">
 |Menter| Huỳnh Trọng Nghĩa  |
 |--|--|
 | Mentees |Nguyễn Chính Nghiệp  |
 |        |Hà Sơn Tùng
-</h3>
+</div>
 
 """
             
