@@ -34,8 +34,7 @@ components.html(
 </tr>
 </tbody>
 </table>
-    """,
-    height=150,
+    """
 )
 
 #Ham tải về
