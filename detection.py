@@ -12,7 +12,17 @@ import streamlit.components.v1 as components
 ##### GIAO DIỆN
 #########################################################
 st.title("**OBJECT DETECTION**")
-st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>OBJECT DETECTION</h2>", unsafe_allow_html=True)
+st.markdown("""
+
+|Menter| Huỳnh Trọng Nghĩa  |
+|--|--|
+| Mentees |Nghienp  |
+|        |Tùng
+
+"""
+            
+            , unsafe_allow_html=True)
 
 st.header(" Menter: Huỳnh Trọng Nghĩa")
 st.subheader(" Mentees: Nguyễn Chính Nghiệp")
