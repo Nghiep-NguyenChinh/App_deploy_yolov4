@@ -5,6 +5,7 @@ import time
 import streamlit as st
 import requests, os
 from PIL import Image
+import streamlit.components.v1 as components
 
 
 #########################################################
@@ -21,25 +22,27 @@ st.title("**OBJECT DETECTION**")
 # st.write(row2)
 # st.write(row3)
 # st.write(row4)
-
-st.markdown("<p \
-<table style="border-collapse: collapse; width: 100%; height: 44px;" border="1"> \
-<tbody>\
-<tr style="height: 17px;"> \
-<td style="width: 29.5407%; height: 17px;">Mentor</td> \
-<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td> \
-</tr> \
-<tr style="height: 17px;"> \
-<td style="width: 29.5407%; height: 17px;">Mentees</td> \
-<td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td> \
-</tr> \
-<tr style="height: 10px;"> \
-<td style="width: 29.5407%; height: 10px;">&nbsp;</td> \
-<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td> \
-</tr> \
-</tbody> \
-</table>>  </p>",unsafe_allow_html=True)          
-
+components.html(
+    """
+    <table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">
+    <tbody>
+    <tr style="height: 17px;">
+    <td style="width: 29.5407%; height: 17px;">Mentor</td>
+    <td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td>
+    </tr>
+    <tr style="height: 17px;">
+    <td style="width: 29.5407%; height: 17px;">Mentees</td>
+    <td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td>
+    </tr>
+    <tr style="height: 10px;">
+    <td style="width: 29.5407%; height: 10px;">&nbsp;</td>
+    <td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td>
+    </tr>
+    </tbody>
+    </table>
+    """,
+    height=600,
+)
 
 #Ham tải về
 ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
