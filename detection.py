@@ -22,7 +22,7 @@ st.title("**OBJECT DETECTION**")
 # st.write(row3)
 # st.write(row4)
 
-st.markdown("<p> \
+st.markdown("<p \
 <table style="border-collapse: collapse; width: 100%; height: 44px;" border="1"> \
 <tbody>\
 <tr style="height: 17px;"> \
@@ -38,7 +38,7 @@ st.markdown("<p> \
 <td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td> \
 </tr> \
 </tbody> \
-</table>  </p>",unsafe_allow_html=True)          
+</table>>  </p>",unsafe_allow_html=True)          
 
 
 #Ham tải về
