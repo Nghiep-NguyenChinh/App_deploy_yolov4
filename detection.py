@@ -18,7 +18,8 @@ st.markdown("""
 |Menter| Huỳnh Trọng Nghĩa  |
 |--|--|
 | Mentees |Nguyễn Chính Nghiệp  |
-|        |Hà Sơn Tùng|</h3>
+|        |Hà Sơn Tùng
+</h3>
 
 """
             
