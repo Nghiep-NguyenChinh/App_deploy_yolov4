@@ -18,7 +18,6 @@ st.header(" Mentees: Nguyễn Chính Nghiệp")
 st.header(" Mentees: Hà Sơn Tùng")
 components.html(
     """
-<p>&nbsp;</p>
 <table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">
 <tbody>
 <tr style="height: 17px;">
@@ -189,7 +188,7 @@ btn = st.button("Băt đầu nhận diện")
 if btn:
     if option=='Yolov4':
         yolo(image)
-    elif option=='Faster-RCNN'
+    elif option=='Faster-RCNN':
         st.write("Oke Rcnn")
     
 
