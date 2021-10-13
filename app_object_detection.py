@@ -37,11 +37,11 @@ def download(url, name):
 #     else:
 #         st.write("Đã tìm thấy file %s!" % name)
 
-st.write("Đang lấy file weights...")
+#st.write("Đang lấy file weights...")
 download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_best.weights', 'yolov4-custom_best.weights')
 download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
 download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
-st.write("Đã xong.")
+st.write("Đã load weight xong.")
 
 
 option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4', 'Mobile phone'))
@@ -87,7 +87,7 @@ try:
     img = Image.open(img_l)
     image = np.array(img)
     st.image(image, "Ảnh gốc")
-except: pass
+except: st.write("Chưa upload ảnh mà!")
 
 btn = st.button("Băt đầu nhận diện")
 
