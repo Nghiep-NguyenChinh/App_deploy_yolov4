@@ -164,15 +164,15 @@ def yolo(image):
 img_l = st.file_uploader("Upload Image",type=['jpg'])
 try:
     img = Image.open(img_l)
-    image = np.array(img)
-    st.image(image, "Ảnh gốc")
+    image0 = np.array(img)
+    st.image(image0, "Ảnh gốc")
 except: pass
 
 btn = st.button("Băt đầu nhận diện")
 
 if btn:
     if option=='Yolov4':
-        yolo(image)
+        yolo(image0)
     elif option=='Faster-RCNN':
         st.write("Oke Rcnn")
     
