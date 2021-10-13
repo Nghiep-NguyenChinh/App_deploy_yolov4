@@ -12,16 +12,33 @@ from PIL import Image
 #########################################################
 st.title("**OBJECT DETECTION**")
 
-row1=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
-row2=("|{:^20}|{:^10}|{:^10}|").format("Ho va ten","MSSV","Ma nganh")
-row3=("|{:^20}|{:^10}|{:^10}|").format("hoten","{ms1}","{nganhhoc}")
-row4=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
-st.write("{:^40}".format("THÔNG TIN"))
-st.write(row1)
-st.write(row2)
-st.write(row3)
-st.write(row4)
-            
+# row1=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
+# row2=("|{:^20}|{:^10}|{:^10}|").format("Ho va ten","MSSV","Ma nganh")
+# row3=("|{:^20}|{:^10}|{:^10}|").format("hoten","{ms1}","{nganhhoc}")
+# row4=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
+# st.write("{:^40}".format("THÔNG TIN"))
+# st.write(row1)
+# st.write(row2)
+# st.write(row3)
+# st.write(row4)
+
+st.markdown("\
+<table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">\
+<tbody>\
+<tr style="height: 17px;">\
+<td style="width: 29.5407%; height: 17px;">Mentor</td>\
+<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td>\
+</tr>\
+<tr style="height: 17px;">\
+<td style="width: 29.5407%; height: 17px;">Mentees</td>\
+<td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td>\
+</tr>\
+<tr style="height: 10px;">\
+<td style="width: 29.5407%; height: 10px;">&nbsp;</td>\
+<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td>\
+</tr>\
+</tbody>\
+</table>  ")          
 
 
 #Ham tải về
