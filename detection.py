@@ -12,10 +12,10 @@ from PIL import Image
 #########################################################
 st.title("**OBJECT DETECTION**")
 
-row1=("+{:*^20}+{:*^10}+{:*^10}+").format("","","")
+row1=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
 row2=("|{:^20}|{:^10}|{:^10}|").format("Ho va ten","MSSV","Ma nganh")
 row3=("|{:^20}|{:^10}|{:^10}|").format("hoten","{ms1}","{nganhhoc}")
-row4=("+{:*^20}+{:*^10}+{:*^10}+").format("","","")
+row4=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
 st.write("{:^40}".format("THÔNG TIN"))
 st.write(row1)
 st.write(row2)
