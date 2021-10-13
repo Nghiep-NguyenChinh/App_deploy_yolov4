@@ -76,15 +76,16 @@ def savePredict(name, text):
     with open(textName, 'w+') as groundTruth:
         groundTruth.write(text)
         groundTruth.close()
-
+classes = None
 
 def yolo(image):
+    global classes
     Width = image.shape[1]
     Height = image.shape[0]
     scale = 0.00392
 
 
-    classes = None
+    
     with open("yolo.names", 'r') as f: # Edit CLASS file
         classes = [line.strip() for line in f.readlines()]
 
@@ -164,15 +165,15 @@ def yolo(image):
 img_l = st.file_uploader("Upload Image",type=['jpg'])
 try:
     img = Image.open(img_l)
-    image0 = np.array(img)
-    st.image(image0, "Ảnh gốc")
+    image = np.array(img)
+    st.image(image, "Ảnh gốc")
 except: pass
 
 btn = st.button("Băt đầu nhận diện")
 
 if btn:
     if option=='Yolov4':
-        yolo(image0)
+        yolo(image)
     elif option=='Faster-RCNN':
         st.write("Oke Rcnn")
     
