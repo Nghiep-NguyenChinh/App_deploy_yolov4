@@ -13,36 +13,30 @@ import streamlit.components.v1 as components
 #########################################################
 st.title("**OBJECT DETECTION**")
 
-# row1=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
-# row2=("|{:^20}|{:^10}|{:^10}|").format("Ho va ten","MSSV","Ma nganh")
-# row3=("|{:^20}|{:^10}|{:^10}|").format("hoten","{ms1}","{nganhhoc}")
-# row4=("+{:-^20}+{:-^10}+{:-^10}+").format("","","")
-# st.write("{:^40}".format("THÔNG TIN"))
-# st.write(row1)
-# st.write(row2)
-# st.write(row3)
-# st.write(row4)
+st.header(" Menter: Huỳnh Trọng Nghĩa")
+st.header(" Mentees: Nguyễn Chính Nghiệp")
+st.header(" Mentees: Hà Sơn Tùng")
 components.html(
     """
 <p>&nbsp;</p>
 <table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">
 <tbody>
 <tr style="height: 17px;">
-<td style="width: 29.5407%; height: 17px;"><span style="color: #ffffff;">Mentor</span></td>
-<td style="width: 70.4593%; height: 17px;"><span style="color: #ffffff;">Huỳnh Trung Nghĩa</span></td>
+<td style="width: 29.5407%; height: 17px;">Mentor</span></td>
+<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</span></td>
 </tr>
 <tr style="height: 17px;">
-<td style="width: 29.5407%; height: 17px;"><span style="color: #ffffff;">Mentees</span></td>
-<td style="width: 70.4593%; height: 17px;"><span style="color: #ffffff;">Nguyễn Ch&iacute;nh Nghiệp</span></td>
+<td style="width: 29.5407%; height: 17px;">Mentees</span></td>
+<td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</span></td>
 </tr>
 <tr style="height: 10px;">
 <td style="width: 29.5407%; height: 10px;">&nbsp;</td>
-<td style="width: 70.4593%; height: 10px;"><span style="color: #ffffff;">H&agrave; Sơn T&ugrave;ng</span></td>
+<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</span></td>
 </tr>
 </tbody>
 </table>
     """,
-    height=100,
+    height=150,
 )
 
 #Ham tải về
@@ -62,6 +56,14 @@ download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_b
 download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
 download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
 
+
+######################################################
+###
+#######################################################
+option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4', 'Mobile phone'))
+
+#st.write('You selected:', option)
+##################################################################
 def get_output_layers(net):
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
@@ -92,22 +94,7 @@ def savePredict(name, text):
         groundTruth.close()
 
 
-
-
-img_l = st.file_uploader("Upload Image",type=['jpg'])
-try:
-    img = Image.open(img_l)
-    image = np.array(img)
-    st.image(image, "Ảnh gốc")
-except: pass
-
-btn = st.button("Băt đầu nhận diện")
-
-if btn:
-
-
-
-
+def yolo(image):
     Width = image.shape[1]
     Height = image.shape[0]
     scale = 0.00392
@@ -186,4 +173,23 @@ if btn:
     end = time.time()
     st.write("YOLO Execution time: " + str(end-start))
     st.image(image, "Ảnh đã nhận diện")
+
+#################
+#### MAIN
+################
+img_l = st.file_uploader("Upload Image",type=['jpg'])
+try:
+    img = Image.open(img_l)
+    image = np.array(img)
+    st.image(image, "Ảnh gốc")
+except: pass
+
+btn = st.button("Băt đầu nhận diện")
+
+if btn:
+    if option=='Yolov4':
+        yolo(image)
+    elif option=='Faster-RCNN'
+        st.write("Oke Rcnn")
+    
 
