@@ -14,11 +14,11 @@ import streamlit.components.v1 as components
 #st.title("**OBJECT DETECTION**")
 st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
 st.markdown("""
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+
+|Menter   | Huỳnh Trọng Nghĩa  |
+|:-------:|:------------------:|
+| Mentees |Nghienp             |
+|         |Tùng                |
 """
             
             , unsafe_allow_html=True)
