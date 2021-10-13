@@ -24,22 +24,23 @@ st.title("**OBJECT DETECTION**")
 # st.write(row4)
 components.html(
     """
-    <table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">
-    <tbody>
-    <tr style="height: 17px;">
-    <td style="width: 29.5407%; height: 17px;">Mentor</td>
-    <td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td>
-    </tr>
-    <tr style="height: 17px;">
-    <td style="width: 29.5407%; height: 17px;">Mentees</td>
-    <td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td>
-    </tr>
-    <tr style="height: 10px;">
-    <td style="width: 29.5407%; height: 10px;">&nbsp;</td>
-    <td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td>
-    </tr>
-    </tbody>
-    </table>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 44px;" border="1">
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 29.5407%; height: 17px;"><span style="background-color: #ccffcc; color: #000000;">Mentor</span></td>
+<td style="width: 70.4593%; height: 17px;"><span style="background-color: #ccffcc; color: #000000;">Huỳnh Trung Nghĩa</span></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 29.5407%; height: 17px;"><span style="background-color: #ccffcc; color: #000000;">Mentees</span></td>
+<td style="width: 70.4593%; height: 17px;"><span style="background-color: #ccffcc; color: #000000;">Nguyễn Ch&iacute;nh Nghiệp</span></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 29.5407%; height: 10px;">&nbsp;</td>
+<td style="width: 70.4593%; height: 10px;"><span style="background-color: #ccffcc; color: #000000;">H&agrave; Sơn T&ugrave;ng</span></td>
+</tr>
+</tbody>
+</table>
     """,
     height=600,
 )
