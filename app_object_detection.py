@@ -23,7 +23,7 @@ st.markdown("""
             
             , unsafe_allow_html=True)
 
-
+st.write("")
 #Ham tải về
 ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
 ##
@@ -41,7 +41,7 @@ def download(url, name):
 download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_best.weights', 'yolov4-custom_best.weights')
 download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
 download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
-st.write("Đã load weight xong.")
+st.write("Trạng thái: Sẵn sàng")
 
 
 option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4', 'Mobile phone'))
@@ -87,7 +87,7 @@ try:
     img = Image.open(img_l)
     image = np.array(img)
     st.image(image, "Ảnh gốc")
-except: st.write("Chưa upload ảnh mà!")
+except: pass
 
 btn = st.button("Băt đầu nhận diện")
 
