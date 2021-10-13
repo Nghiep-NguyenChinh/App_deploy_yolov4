@@ -23,15 +23,15 @@ components.html(
 <tbody>
 <tr style="height: 17px;">
 <td style="width: 29.5407%; height: 17px;">Mentor</td>
-<td style="width: 70.4593%; height: 17px;">Huỳnh Trung Nghĩa</td>
+<td style="width: 70.4593%; height: 17px;"><span style="color: #ffffff;">Huỳnh Trung Nghĩa</span></td>
 </tr>
 <tr style="height: 17px;">
-<td style="width: 29.5407%; height: 17px;">Mentees</td>
+<td style="width: 29.5407%; height: 17px;"><span style="color: #ffffff;">Mentees</span></td>
 <td style="width: 70.4593%; height: 17px;">Nguyễn Ch&iacute;nh Nghiệp</td>
 </tr>
 <tr style="height: 10px;">
 <td style="width: 29.5407%; height: 10px;">&nbsp;</td>
-<td style="width: 70.4593%; height: 10px;">H&agrave; Sơn T&ugrave;ng</td>
+<td style="width: 70.4593%; height: 10px;"><span style="color: #ffffff;">H&agrave; Sơn T&ugrave;ng</span></td>
 </tr>
 </tbody>
 </table>
