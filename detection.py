@@ -7,6 +7,23 @@ import requests, os
 from PIL import Image
 
 
+#########################################################
+##### GIAO DIỆN
+#########################################################
+st.title("**OBJECT DETECTION**")
+
+row1=("+{:*^20}+{:*^10}+{:*^10}+").format("","","")
+row2=("|{:^20}|{:^10}|{:^10}|").format("Ho va ten","MSSV","Ma nganh")
+row3=("|{:^20}|{:^10}|{:^10}|").format("hoten","{ms1}","{nganhhoc}")
+row4=("+{:*^20}+{:*^10}+{:*^10}+").format("","","")
+st.write("{:^40}".format("THÔNG TIN"))
+st.write(row1)
+st.write(row2)
+st.write(row3)
+st.write(row4)
+            
+
+
 #Ham tải về
 ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
 ##
