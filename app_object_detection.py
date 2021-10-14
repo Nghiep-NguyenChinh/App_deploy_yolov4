@@ -44,7 +44,7 @@ download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'y
 st.write("Trạng thái: Sẵn sàng")
 
 
-option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4', 'Mobile phone'))
+option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4'))
 #st.write('You selected:', option)
 
 ##################################################################
