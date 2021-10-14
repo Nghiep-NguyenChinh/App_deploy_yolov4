@@ -89,7 +89,7 @@ try:
     st.image(image, "Ảnh gốc")
 except: pass
 
-btn = st.button("Băt đầu nhận diện")
+btn = st.button("Bắt đầu nhận diện")
 
 if btn:
     if option=='Yolov4':        
