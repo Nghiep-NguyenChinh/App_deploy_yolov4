@@ -31,13 +31,13 @@ def main_rcnn():
 	st.write("Trạng thái: Sẵn sàng")
 	
 	img_l = st.file_uploader("Upload Image",type=['jpg'])
-	    try:
+	try:
 		img = Image.open(img_l)
 		image = np.array(img)
 		st.image(image, "Ảnh gốc")
-	    except: pass
+	except: pass
 
-	    btn = st.button("Bắt đầu nhận diện")
+	btn = st.button("Bắt đầu nhận diện")
 
 	if btn:
 		#~~~~~~~~~~~~~~~~~~~~~Faster-RCNN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
