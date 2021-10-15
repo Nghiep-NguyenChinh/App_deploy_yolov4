@@ -5,7 +5,11 @@ import numpy as np
 import sys
 import time
 from tensorflow.keras import backend as K
-from keras_frcnn import roi_helpers
+
+
+sys.path.append("keras_frcnn")
+
+import roi_helpers
 
 # Set learning phase to 0 for model.predict. Set to 1 for training
 K.set_learning_phase(0)
