@@ -1,11 +1,7 @@
 import streamlit as st
-import os 
-import sys
+import os, sys, requests, cv2, pickle
 from time import gmtime, strftime
-
-import cv2
 import numpy as np
-import pickle
 from Faster_RCNN.keras_frcnn import config
 from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
