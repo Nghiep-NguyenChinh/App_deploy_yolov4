@@ -58,15 +58,16 @@ def get_real_coordinates(ratio, x1, y1, x2, y2):
     return (real_x1, real_y1, real_x2 ,real_y2)
 
 
-def predict(num_rois, C, img_folder, img_name, class_mapping, class_to_color, model_rpn, model_classifier, bbox_threshold = 0.7):
-    assert img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')), "Not a format of image!"
+def predict(num_rois, C, img_name, class_mapping, class_to_color, model_rpn, model_classifier, bbox_threshold = 0.7):
+    #assert img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')), "Not a format of image!"
     
     st = time.time()
 
 
-    img_path = os.path.join(img_folder, img_name)
-    img = cv2.imread(img_path)
-
+    #img_path = os.path.join(img_folder, img_name)
+    #img = cv2.imread(img_path)
+    img = img_name
+    
     X, ratio = format_img(img, C)
 
     if K.image_data_format() == 'channels_last':
