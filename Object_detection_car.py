@@ -14,7 +14,7 @@ st.markdown("""
 
 st.write("")
 
-app = st.selectbox("Chọn App", ["YoloV4", "Faster-RCNN"])
+app = st.selectbox("Chọn mô hình", ["YoloV4", "Faster-RCNN"])
 
 if (app=="YoloV4"):
     import yolo_detection
