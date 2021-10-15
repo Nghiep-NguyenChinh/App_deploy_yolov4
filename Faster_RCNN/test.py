@@ -7,9 +7,9 @@ import time
 from tensorflow.keras import backend as K
 
 
-sys.path.append("keras_frcnn")
+sys.path.append("Faster_RCNN/keras_frcnn")
 
-from keras_frcnn import roi_helpers
+from Faster_RCNN.keras_frcnn import roi_helpers
 
 # Set learning phase to 0 for model.predict. Set to 1 for training
 K.set_learning_phase(0)
