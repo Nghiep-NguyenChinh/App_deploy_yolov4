@@ -72,17 +72,7 @@ def yolo():
     ##### GIAO DIỆN
     #########################################################
     #st.title("**OBJECT DETECTION**")
-    st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
-    st.markdown("""
-
-    |Menter   | Huỳnh Trọng Nghĩa  |
-    |:-------:|:------------------:|
-    | Mentees |Nguyễn Chính Nghiệp  |
-    |         |Hà Sơn Tùng         |
-    """
-                , unsafe_allow_html=True)
-
-    st.write("")
+    
     #Ham tải về
     ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
     ##
