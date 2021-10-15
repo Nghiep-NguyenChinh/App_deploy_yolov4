@@ -1,11 +1,15 @@
 import streamlit as st
 import os, sys, requests, cv2, pickle
 from time import gmtime, strftime
+from PIL import Image
 import numpy as np
-from Faster_RCNN.keras_frcnn import config
 from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
 from tensorflow.keras import backend as K
+
+sys.path.append("Faster_RCNN")
+
+from Faster_RCNN.keras_frcnn import config
 import Faster_RCNN.test as FRCNN
 
 def download(url, name):      
