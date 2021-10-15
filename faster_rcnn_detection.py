@@ -11,7 +11,6 @@ from tensorflow.keras.layers import Input
 from tensorflow.keras.models import Model
 from tensorflow.keras import backend as K
 import Faster_RCNN.test as FRCNN
-import YOLO.detection as YOLO
 
 def download(url, name):      
     if (os.path.exists(name)==False):
