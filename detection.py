@@ -8,25 +8,16 @@ from PIL import Image
 import streamlit.components.v1 as components
 
 
-#########################################################
-##### GIAO DIỆN
-#########################################################
-#st.title("**OBJECT DETECTION**")
-st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
-st.markdown("""
+##################################################################
 
-|Menter   | Huỳnh Trọng Nghĩa  |
-|:-------:|:------------------:|
-| Mentees |Nguyễn Chính Nghiệp  |
-|         |Hà Sơn Tùng         |
-"""
-            
-            , unsafe_allow_html=True)
+classes = None
+COLORS = None
+class_ids = []
+confidences = []
+boxes = []
+conf_threshold = 0.2
+nms_threshold = 0.4
 
-st.write("")
-#Ham tải về
-##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
-##
 def download(url, name):      
     if (os.path.exists(name)==False):
         #st.write("Đang lấy file %s..." % name)
@@ -37,27 +28,19 @@ def download(url, name):
 #     else:
 #         st.write("Đã tìm thấy file %s!" % name)
 
-#st.write("Đang lấy file weights...")
-download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_best.weights', 'yolov4-custom_best.weights')
-download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
-download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
-st.write("Trạng thái: Sẵn sàng")
-
-
-option = st.selectbox('Chọn model',('Faster-RCNN', 'Yolov4'))
-#st.write('You selected:', option)
-
-##################################################################
 def get_output_layers(net):
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
     return output_layers
 
 def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
-    label = str(classes[class_id])
-    color = COLORS[class_id]
-    cv2.rectangle(img, (x, y), (x_plus_w, y_plus_h), (255,0,0), 2)
-    cv2.putText(img, label + "%0.2f" % confidence , (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,255), 2)
+    global COLORS
+    try:
+        label = str(classes[class_id])
+        color = COLORS[class_id]
+        cv2.rectangle(img, (x, y), (x_plus_w, y_plus_h), (255,0,0), 2)
+        cv2.putText(img, label + "%0.2f" % confidence , (x - 10, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,255), 2)
+    except: pass
 
 def drawBox(image, points):
     height, width = image.shape[:2]
@@ -71,6 +54,7 @@ def drawBox(image, points):
         y = int(center_y - h / 2)
         cv2.rectangle(image, (x, y), (x + w, y + h), black, 1)
     return
+
 def savePredict(name, text):
     textName = name + '.txt'
     with open(textName, 'w+') as groundTruth:
@@ -78,25 +62,51 @@ def savePredict(name, text):
         groundTruth.close()
 
 
-  
 #################
 #### MAIN
 ################
-img_l = st.file_uploader("Upload Image",type=['jpg'])
-try:
-    img = Image.open(img_l)
-    image = np.array(img)
-    st.image(image, "Ảnh gốc")
-except: pass
 
-btn = st.button("Bắt đầu nhận diện")
+def yolo():
+    global classes, COLORS, class_ids, confidences, boxes, conf_threshold, nms_threshold
+    #########################################################
+    ##### GIAO DIỆN
+    #########################################################
+    #st.title("**OBJECT DETECTION**")
+    st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
+    st.markdown("""
 
-if btn:
-    if option=='Yolov4':        
+    |Menter   | Huỳnh Trọng Nghĩa  |
+    |:-------:|:------------------:|
+    | Mentees |Nguyễn Chính Nghiệp  |
+    |         |Hà Sơn Tùng         |
+    """
+                , unsafe_allow_html=True)
+
+    st.write("")
+    #Ham tải về
+    ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
+    ##
+    #st.write("Đang lấy file weights...")
+    download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_best.weights', 'yolov4-custom_best.weights')
+    download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
+    download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
+    st.write("Trạng thái: Sẵn sàng")
+    
+    img_l = st.file_uploader("Upload Image",type=['jpg'])
+    try:
+        img = Image.open(img_l)
+        image = np.array(img)
+        st.image(image, "Ảnh gốc")
+    except: pass
+
+    btn = st.button("Bắt đầu nhận diện")
+
+    if btn:
+            
         Width = image.shape[1]
         Height = image.shape[0]
         scale = 0.00392
-        
+
         classes = None
         with open("yolo.names", 'r') as f: # Edit CLASS file
             classes = [line.strip() for line in f.readlines()]
@@ -170,6 +180,7 @@ if btn:
         end = time.time()
         st.write("YOLO Execution time: " + str(end-start))
         st.image(image, "Ảnh đã nhận diện")
-    elif option=='Faster-RCNN':
-        st.write("Oke Rcnn")
-    
+   
+if __name__=="__main__":
+    yolo()
+
