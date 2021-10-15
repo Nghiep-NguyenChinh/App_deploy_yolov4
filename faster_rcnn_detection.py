@@ -24,6 +24,12 @@ def download(url, name):
 #         st.write("Đã tìm thấy file %s!" % name)
 
 def main_rcnn():
+	
+	st.write("Đang lấy file weights...")
+	download('https://archive.org/download/best_model_frcnn/Faster_RCNN/best_weights/best_model_frcnn.hdf5', 'best_model_frcnn.hdf5')
+	download('https://archive.org/download/best_model_frcnn/Faster_RCNN/config.pickle', 'config.pickle')
+	st.write("Trạng thái: Sẵn sàng")
+	
 	img_l = st.file_uploader("Upload Image",type=['jpg'])
 	    try:
 		img = Image.open(img_l)
