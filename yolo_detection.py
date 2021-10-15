@@ -23,7 +23,7 @@ def download(url, name):
         #st.write("Đang lấy file %s..." % name)
         w = requests.get(url).content  # lấy nội dung url
         with open(name,'wb') as f:
-            st.write(f.write(w))   # in ra màn hình
+            f.write(w)  # ghi ra file
         f.close()
 #     else:
 #         st.write("Đã tìm thấy file %s!" % name)
@@ -86,7 +86,7 @@ def yolo():
     #Ham tải về
     ##  Kiểm tra file 'name' có tồn tại chưa || không thì kéo nội dung từ link url tạo thành name 
     ##
-    #st.write("Đang lấy file weights...")
+    st.write("Đang lấy file weights...")
     download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom_best.weights', 'yolov4-custom_best.weights')
     download('https://archive.org/download/yolov4-custom_best_202110/yolov4-custom.cfg', 'yolov4-custom.cfg')
     download('https://archive.org/download/yolov4-custom_best_202110/yolo.names', 'yolo.names')
