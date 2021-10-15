@@ -13,7 +13,7 @@ st.markdown("""
 , unsafe_allow_html=True)
 
 st.write("")
-
+st.write(" Vật thể nhận diện: Car")
 app = st.selectbox("Chọn mô hình", ["YoloV4", "Faster-RCNN"])
 
 if (app=="YoloV4"):
