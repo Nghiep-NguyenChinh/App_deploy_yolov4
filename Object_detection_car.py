@@ -2,8 +2,17 @@ import streamlit as st
 import sys, os
 import importlib
 
-#sys.path.append("pages")
-#sys.path.append("yolo")
+st.markdown("<h1 style='text-align: center;'>OBJECT DETECTION</h1>", unsafe_allow_html=True)
+st.markdown("""
+
+|Menter   | Huỳnh Trọng Nghĩa  |
+|:-------:|:------------------:|
+| Mentees |Nguyễn Chính Nghiệp  |
+|         |Hà Sơn Tùng         |
+"""
+, unsafe_allow_html=True)
+
+st.write("")
 
 app = st.selectbox("Chọn App", ["YoloV4", "Faster-RCNN"])
 
